@@ -1,0 +1,13 @@
+{
+    "name": "design-components",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "^5.0.0-beta1",
+        "node-sass": "^5.0.0",
+        "qrcode.react": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/qrcode.react": "^1.0.1"
+    }
+}
