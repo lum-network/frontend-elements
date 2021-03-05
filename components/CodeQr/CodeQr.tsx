@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import QRCode from 'qrcode.react';
-import logoDark from 'design-components/assets/images/logoDark.svg';
+import logoDark from 'frontend-elements/assets/images/logoDark.svg';
 
 interface Props {
     content: string;
