@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import './Input.scss';
 
 interface IProps {
@@ -9,41 +9,39 @@ interface IProps {
     placeholder?: string;
 }
 
-class TextInput extends PureComponent<IProps> {
-    onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-        const { onSubmit } = this.props;
+const TextInput = (props: IProps): JSX.Element => {
+    const { onChangeText, value, placeholder } = props;
 
-        e.preventDefault();
-
-        onSubmit();
-    };
-
-    renderIcon(): JSX.Element | null {
-        const { icon } = this.props;
+    const renderIcon = (): JSX.Element | null => {
+        const { icon } = props;
 
         if (!icon) {
             return null;
         }
 
         return <img alt="icon" className="icon-input" src={icon} />;
-    }
+    };
 
-    render(): JSX.Element {
-        const { onChangeText, value, placeholder } = this.props;
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+        const { onSubmit } = props;
 
-        return (
-            <form onSubmit={this.onSubmit} className="position-relative">
-                {this.renderIcon()}
-                <input
-                    type="text"
-                    className="text w-100"
-                    value={value}
-                    onChange={(event) => onChangeText(event.target.value)}
-                    placeholder={placeholder}
-                />
-            </form>
-        );
-    }
-}
+        e.preventDefault();
+
+        onSubmit();
+    };
+
+    return (
+        <form onSubmit={onSubmit} className="position-relative">
+            {renderIcon()}
+            <input
+                type="text"
+                className="text w-100"
+                value={value}
+                onChange={(event) => onChangeText(event.target.value)}
+                placeholder={placeholder}
+            />
+        </form>
+    );
+};
 
 export default TextInput;
