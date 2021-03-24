@@ -1,18 +1,20 @@
 import React from 'react';
 import './Button.scss';
+import Loading from '../Loading/Loading';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     outline?: boolean;
     onPress: () => void;
     className?: string;
+    loading?: boolean;
 }
 
 const Button = (props: IProps): JSX.Element => {
-    const { children, onPress, outline, className } = props;
+    const { children, onPress, outline, className, loading } = props;
 
     return (
         <div onClick={onPress} className={`app-btn ${outline ? 'app-btn-outline' : 'app-btn-plain'} ${className}`}>
-            {children}
+            {loading ? <Loading /> : children}
         </div>
     );
 };
