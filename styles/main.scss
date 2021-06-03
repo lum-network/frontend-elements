@@ -55,6 +55,13 @@ $color-dot-cyan: #5FD2DC;
     color: $color-type;
 }
 
+.round-tags {
+    border: $color-type 2px solid;
+    border-radius: 20px;
+    padding: 1px 8px;
+    font-size: $font-sm;
+}
+
 @mixin no-margin {
     margin-bottom: 0 !important;
 }
