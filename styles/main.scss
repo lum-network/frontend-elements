@@ -26,38 +26,38 @@ $font-xl: 25px;
 $font-xxl: 30px;
 
 // Colors
-$color-background: #FCFDFF;
+$color-background: #fcfdff;
 $color-dark-background: #000;
-$color-grey: #B5B5B5;
-$color-primary: #2E2E2E;
-$color-white: #FFF;
+$color-grey: #b5b5b5;
+$color-primary: #2e2e2e;
+$color-white: #fff;
 $color-black: #000;
-$color-link: #48A7FF;
-$color-type: #98BBFF;
+$color-link: #48a7ff;
+$color-type: #98bbff;
 $color-striped: #f2f6fd;
 $color-dark-striped: #171717;
-$color-input: #F4F6F8;
-$color-green: #5ECD42;
-$color-light-green: #DBFFD2;
-$color-red: #FF7245;
-$color-light-red: #FFDDD3;
-$color-orange: #FFCD6A;
-$color-light-orange: #FFCD6A33;
-$color-blue: #00B1FF;
-$color-light-blue: #E5F7FF;
+$color-input: #f4f6f8;
+$color-green: #5ecd42;
+$color-light-green: #dbffd2;
+$color-red: #ff7245;
+$color-light-red: #ffddd3;
+$color-orange: #ffcd6a;
+$color-light-orange: #ffcd6a33;
+$color-blue: #00b1ff;
+$color-light-blue: #e5f7ff;
 
 $color-badge-dark: #989898;
 
-$color-dot-green: #5FD68B;
-$color-dot-orange: #FD9033;
-$color-dot-blue: #5F99DC;
-$color-dot-cyan: #5FD2DC;
-$color-dot-grey: #9FA4AD;
+$color-dot-green: #5fd68b;
+$color-dot-orange: #fd9033;
+$color-dot-blue: #5f99dc;
+$color-dot-cyan: #5fd2dc;
+$color-dot-grey: #9fa4ad;
 
-$color-vote-green: #9FE6B9;
-$color-vote-red: #FF8686;
-$color-vote-yellow: #FFD029;
-$color-vote-grey: #C4C4C4;
+$color-vote-green: #9fe6b9;
+$color-vote-red: #ff8686;
+$color-vote-yellow: #ffd029;
+$color-vote-grey: #c4c4c4;
 
 .color-type {
     color: $color-type;
@@ -83,7 +83,7 @@ body {
 h1 {
     font-weight: $medium;
     font-size: $font-xl;
-    @include no-margin()
+    @include no-margin();
 }
 
 h2 {
@@ -103,7 +103,7 @@ h2 > img {
 
 h3 {
     font-weight: $regular;
-    @include no-margin()
+    @include no-margin();
 }
 
 h4 {
@@ -130,13 +130,13 @@ h5 {
 h6 {
     font-weight: $medium;
     font-size: $font-md;
-    @include no-margin()
+    @include no-margin();
 }
 
 p {
     font-weight: $light;
     font-size: $primary-fs;
-    @include no-margin()
+    @include no-margin();
 }
 
 a {
@@ -159,11 +159,14 @@ ul {
 }
 
 @media (prefers-color-scheme: dark) {
-    h4, h2 {
+    h4,
+    h2 {
         color: $color-white;
     }
 
-    h4 > img, h2 > img, .placeholder-image {
+    h4 > img,
+    h2 > img,
+    .placeholder-image {
         filter: brightness(0) invert(1);
     }
 }

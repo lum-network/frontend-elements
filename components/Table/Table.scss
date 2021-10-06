@@ -1,13 +1,13 @@
-@import "../../styles/main";
+@import '../../styles/main';
 
-.app-table-striped>tbody>tr:nth-child(odd)>td,
-.app-table-striped>tbody>tr:nth-child(odd)>th {
+.app-table-striped > tbody > tr:nth-child(odd) > td,
+.app-table-striped > tbody > tr:nth-child(odd) > th {
     background-color: $color-striped;
 }
 
 @media (prefers-color-scheme: dark) {
-    .app-table-striped>tbody>tr:nth-child(odd)>td,
-    .app-table-striped>tbody>tr:nth-child(odd)>th {
+    .app-table-striped > tbody > tr:nth-child(odd) > td,
+    .app-table-striped > tbody > tr:nth-child(odd) > th {
         background-color: $color-dark-striped;
     }
 
@@ -19,8 +19,7 @@
 .table th:first-child,
 .table th:last-child,
 .table td:first-child,
-.table td:last-child
-{
+.table td:last-child {
     padding-left: 48px;
     padding-right: 48px;
 }
@@ -64,7 +63,7 @@
     }
 
     table.table td:before {
-        content:attr(data-label);
+        content: attr(data-label);
         float: left;
         font-weight: $medium;
     }
