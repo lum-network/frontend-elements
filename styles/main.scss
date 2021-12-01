@@ -160,6 +160,12 @@ ul {
     margin: 0;
 }
 
+.tooltip-light {
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.11);
+    border-radius: 8px !important;
+    opacity: 1 !important;
+}
+
 @media (prefers-color-scheme: dark) {
     h4,
     h2 {
