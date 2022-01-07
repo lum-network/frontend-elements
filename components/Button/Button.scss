@@ -9,6 +9,9 @@
     cursor: pointer;
     transition: all linear 150ms;
     height: 35px;
+    &.disabled {
+        opacity: 0.3;
+    }
 }
 
 .app-btn:hover {
