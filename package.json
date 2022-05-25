@@ -4,8 +4,8 @@
     "private": true,
     "dependencies": {
         "bootstrap": "^5.0.0-beta1",
-        "node-sass": "^5.0.0",
-        "qrcode.react": "^1.0.1"
+        "qrcode.react": "^1.0.1",
+        "sass": "^1.52.1"
     },
     "devDependencies": {
         "@types/qrcode.react": "^1.0.1"
