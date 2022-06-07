@@ -5,28 +5,41 @@
     justify-content: center;
     align-items: center;
     padding: 0 18px;
-    background-color: $color-primary;
-    color: $color-white;
     border-radius: 20px;
     cursor: pointer;
     transition: all linear 150ms;
     height: 35px;
+    &.disabled {
+        opacity: 0.3;
+    }
 }
 
 .app-btn:hover {
     transform: scale(1.05);
-    color: $color-white;
 }
 
 .app-btn-outline {
+    background-color: transparent !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $color-primary;
+    color: $color-primary;
 }
 
 .app-btn-plain {
+    background-color: $color-primary;
+    color: $color-white;
 }
 
 @media (prefers-color-scheme: dark) {
-    .app-btn {
+    .app-btn-plain {
         background-color: $color-white;
         color: $color-primary !important;
+    }
+
+    .app-btn-outline {
+        background-color: transparent !important;
+        color: $color-white;
+        border-color: $color-white;
     }
 }

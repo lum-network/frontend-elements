@@ -30,8 +30,11 @@ export const ValidatorLogo = ({
             width={width}
             height={height}
             src={url}
-            onError={(event) => (event.currentTarget.src = placeholderValidator)}
-            className={`rounded-circle placeholder-image ${className}`}
+            onError={(event) => {
+                event.currentTarget.src = placeholderValidator;
+                event.currentTarget.className = `rounded-circle placeholder-image ${className}`;
+            }}
+            className={`rounded-circle ${className}`}
         />
     );
 };
