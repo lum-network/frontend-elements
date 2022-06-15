@@ -12,16 +12,7 @@ interface IProps {
     logoExtension?: string;
 }
 
-export const ValidatorLogo = ({
-    githubBranchName = 'master',
-    githubUrl,
-    chainId,
-    validatorAddress,
-    width,
-    height,
-    className,
-    logoExtension = 'png',
-}: IProps): JSX.Element => {
+export const ValidatorLogo = ({ githubBranchName = 'master', githubUrl, chainId, validatorAddress, width, height, className, logoExtension = 'png' }: IProps): JSX.Element => {
     const url = `${githubUrl}/raw/${githubBranchName}/${chainId}/${validatorAddress}.${logoExtension}`;
 
     return (

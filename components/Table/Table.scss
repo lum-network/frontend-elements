@@ -68,3 +68,16 @@
         font-weight: $medium;
     }
 }
+
+.page-item.active .page-link {
+    background-color: $color-link !important;
+    color: $color-white !important;
+    border-color: $color-link !important;
+}
+
+.page-item .page-link {
+    color: $color-link !important;
+}
+
+@media (prefers-color-scheme: dark) {
+}

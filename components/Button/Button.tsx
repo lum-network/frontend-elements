@@ -13,12 +13,7 @@ const Button = (props: IProps): JSX.Element => {
     const { children, onPress, outline, className, loading } = props;
 
     return (
-        <div
-            onClick={!loading ? onPress : () => null}
-            className={`app-btn ${props.disabled ? 'disabled' : ''} ${
-                outline ? 'app-btn-outline' : 'app-btn-plain'
-            } ${className}`}
-        >
+        <div onClick={!loading ? onPress : () => null} className={`app-btn ${props.disabled ? 'disabled' : ''} ${outline ? 'app-btn-outline' : 'app-btn-plain'} ${className}`}>
             {loading ? <Loading /> : children}
         </div>
     );
