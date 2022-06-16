@@ -30,7 +30,7 @@ const Table = (props: IProps): JSX.Element => {
         }
 
         return (
-            <div className="pe-4 pb-4 pe-xl-5 pb-xl-5 d-flex justify-content-end">
+            <div className="pe-4 pe-xl-5 d-flex justify-content-end">
                 <ul className="pagination">
                     <li className={`page-item ${hasPreviousPage ? '' : 'disabled'}`}>
                         <a onClick={() => onPageChange(page - 1)} className="page-link pointer">
