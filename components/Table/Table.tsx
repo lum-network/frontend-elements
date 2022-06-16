@@ -30,7 +30,7 @@ const Table = (props: IProps): JSX.Element => {
         }
 
         return (
-            <div className="pe-4 pe-xl-5 d-flex justify-content-end">
+            <div className="pe-3 d-flex justify-content-end">
                 <ul className="pagination">
                     <li className={`page-item ${hasPreviousPage ? '' : 'disabled'}`}>
                         <a onClick={() => onPageChange(page - 1)} className="page-link pointer">
@@ -79,21 +79,23 @@ const Table = (props: IProps): JSX.Element => {
     };
 
     return (
-        <div className={`table-responsive ${className}`}>
-            <table className="table app-table-striped table-borderless">
-                <thead>
-                    <tr>
-                        {head.map((value: string, index) => (
-                            <th className={limitLeft <= index ? 'text-end' : 'm-4'} key={index}>
-                                {value}
-                            </th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>{children}</tbody>
-            </table>
+        <>
+            <div className={`table-responsive ${className}`}>
+                <table className="table app-table-striped table-borderless">
+                    <thead>
+                        <tr>
+                            {head.map((value: string, index) => (
+                                <th className={limitLeft <= index ? 'text-end' : 'm-4'} key={index}>
+                                    {value}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>{children}</tbody>
+                </table>
+            </div>
             {renderPagination()}
-        </div>
+        </>
     );
 };
 
