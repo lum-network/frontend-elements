@@ -33,13 +33,7 @@ const TextInput = (props: IProps): JSX.Element => {
     return (
         <form onSubmit={onSubmit} className="position-relative">
             {renderIcon()}
-            <input
-                type="text"
-                className="text w-100"
-                value={value}
-                onChange={(event) => onChangeText(event.target.value)}
-                placeholder={placeholder}
-            />
+            <input type="text" className="text w-100" value={value} onChange={(event) => onChangeText(event.target.value)} placeholder={placeholder} />
         </form>
     );
 };

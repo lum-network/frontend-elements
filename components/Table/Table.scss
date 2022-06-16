@@ -68,3 +68,30 @@
         font-weight: $medium;
     }
 }
+
+.page-item.active .page-link {
+    background-color: $color-link !important;
+    color: $color-white !important;
+    border-color: $color-link !important;
+}
+
+.page-item .page-link {
+    color: $color-link !important;
+}
+
+.page-item.disabled .page-link {
+    color: $color-grey !important;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+}

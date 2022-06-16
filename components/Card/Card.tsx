@@ -14,11 +14,7 @@ const Card = (props: IProps): JSX.Element => {
     const { children, className, flat, badge, dark, withoutPadding } = props;
 
     return (
-        <div
-            className={`${withoutPadding ? '' : 'p-3 py-4 p-sm-4 p-xl-5'} position-relative app-card ${
-                flat && 'flat'
-            } ${dark && 'dark'} ${className}`}
-        >
+        <div className={`${withoutPadding ? '' : 'p-3 py-4 p-sm-4 p-xl-5'} position-relative app-card ${flat && 'flat'} ${dark && 'dark'} ${className}`}>
             <div className="badge-position">{badge}</div>
             {children}
         </div>
