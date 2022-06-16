@@ -23,9 +23,9 @@ const Table = (props: IProps): JSX.Element => {
             return null;
         }
 
-        const { page, hasPreviousPage, hasNextPage } = pagination;
+        const { page, hasPreviousPage, hasNextPage, pagesTotal } = pagination;
 
-        if (page === undefined) {
+        if (page === undefined || pagesTotal === undefined) {
             return null;
         }
 
@@ -37,6 +37,13 @@ const Table = (props: IProps): JSX.Element => {
                             Previous
                         </a>
                     </li>
+                    {hasPreviousPage && page > 1 && (
+                        <li className="page-item">
+                            <a onClick={() => onPageChange(0)} className="page-link pointer">
+                                0
+                            </a>
+                        </li>
+                    )}
                     {hasPreviousPage && (
                         <li className="page-item">
                             <a onClick={() => onPageChange(page - 1)} className="page-link pointer">
@@ -51,6 +58,13 @@ const Table = (props: IProps): JSX.Element => {
                         <li className="page-item">
                             <a onClick={() => onPageChange(page + 1)} className="page-link pointer">
                                 {page + 1}
+                            </a>
+                        </li>
+                    )}
+                    {hasNextPage && page < pagesTotal - 2 && (
+                        <li className="page-item">
+                            <a onClick={() => onPageChange(pagesTotal - 1)} className="page-link pointer">
+                                {pagesTotal - 1}
                             </a>
                         </li>
                     )}
