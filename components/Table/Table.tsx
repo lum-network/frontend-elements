@@ -40,7 +40,7 @@ const Table = (props: IProps): JSX.Element => {
                     {hasPreviousPage && page > 1 && (
                         <li className="page-item">
                             <a onClick={() => onPageChange(0)} className="page-link pointer">
-                                0
+                                0 ...
                             </a>
                         </li>
                     )}
@@ -64,7 +64,7 @@ const Table = (props: IProps): JSX.Element => {
                     {hasNextPage && page < pagesTotal - 2 && (
                         <li className="page-item">
                             <a onClick={() => onPageChange(pagesTotal - 1)} className="page-link pointer">
-                                {pagesTotal - 1}
+                                ... {pagesTotal - 1}
                             </a>
                         </li>
                     )}
