@@ -94,4 +94,19 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    .page-item.active .page-link {
+        background-color: $color-link !important;
+        color: $color-white !important;
+        border-color: $color-link !important;
+    }
+
+    .page-item .page-link {
+        color: $color-link !important;
+        background-color: $color-dark-background !important;
+        border-color: $color-dark-background !important;
+    }
+
+    .page-item.disabled .page-link {
+        color: $color-grey !important;
+    }
 }
