@@ -4,6 +4,7 @@ import './Table.scss';
 interface IProps {
     children?: React.ReactNode;
     className?: string;
+    customPagination?: string;
     head: string[];
     pagination?: {
         hasNextPage?: boolean;
@@ -15,7 +16,7 @@ interface IProps {
 }
 
 const Table = (props: IProps): JSX.Element => {
-    const { head, children, className, pagination, onPageChange } = props;
+    const { head, children, className, pagination, onPageChange, customPagination } = props;
     const limitLeft = head.length / 2;
 
     const renderPagination = () => {
@@ -30,7 +31,7 @@ const Table = (props: IProps): JSX.Element => {
         }
 
         return (
-            <div className="pe-3 d-flex justify-content-end">
+            <div className={`pe-3 d-flex justify-content-end ${customPagination}`}>
                 <ul className="pagination">
                     <li className={`page-item ${hasPreviousPage ? '' : 'disabled'}`}>
                         <a onClick={() => onPageChange(page - 1)} className="page-link pointer">
