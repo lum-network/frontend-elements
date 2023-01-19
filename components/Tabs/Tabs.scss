@@ -1,0 +1,35 @@
+@import '../../styles/main';
+
+.tabs {
+    .tabs-header {
+        display: flex;
+        align-self: center;
+        background-color: $color-striped;
+        padding: 5px 8px;
+        border-radius: 25px;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-striped;
+        }
+    }
+
+    .tab-title {
+        display: inline-block;
+        padding: 0 1rem;
+        line-height: 2rem;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: all 0.4s ease-in-out;
+        &.active {
+            background-color: $color-white;
+            border-radius: 18px;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-primary;
+            }
+        }
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
