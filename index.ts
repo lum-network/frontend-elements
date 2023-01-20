@@ -6,3 +6,4 @@ export { default as TextInput } from './components/Inputs/TextInput';
 export { default as Card } from './components/Card/Card';
 export { default as Table } from './components/Table/Table';
 export { default as ValidatorLogo } from './components/ValidatorLogo/ValidatorLogo';
+export { default as Tabs } from './components/Tabs/Tabs';
