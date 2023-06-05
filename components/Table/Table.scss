@@ -6,13 +6,19 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .app-table-striped > tbody > tr:nth-child(odd) > td,
-    .app-table-striped > tbody > tr:nth-child(odd) > th {
-        background-color: $color-dark-striped;
+    .app-table-striped > thead > tr > th {
+        background-color: $color-primary;
+        color: $color-white;
     }
 
-    table {
-        color: $color-white !important;
+    .app-table-striped > tbody > tr:nth-child(odd) > td {
+        background-color: $color-dark-striped;
+        color: $color-white;
+    }
+
+    .app-table-striped > tbody > tr:nth-child(even) > td {
+        background-color: $color-primary;
+        color: $color-white;
     }
 }
 
